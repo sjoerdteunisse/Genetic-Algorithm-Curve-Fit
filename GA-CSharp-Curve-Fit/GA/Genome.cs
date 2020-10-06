@@ -2,7 +2,6 @@
 {
     public class Genome
     {
-        private double value;
-        public double Value { get => value; set => this.value = value; }
+        public double Value { get; set; }
     }
 }

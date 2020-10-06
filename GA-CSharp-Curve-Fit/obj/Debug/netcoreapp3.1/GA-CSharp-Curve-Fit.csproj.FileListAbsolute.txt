@@ -11,3 +11,16 @@ C:\Users\Sjoerd\source\repos\GA-CSharp-Curve-Fit\GA-CSharp-Curve-Fit\bin\Debug\n
 C:\Users\Sjoerd\source\repos\GA-CSharp-Curve-Fit\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.dll
 C:\Users\Sjoerd\source\repos\GA-CSharp-Curve-Fit\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.pdb
 C:\Users\Sjoerd\source\repos\GA-CSharp-Curve-Fit\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.genruntimeconfig.cache
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\bin\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.exe
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\bin\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.deps.json
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\bin\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.runtimeconfig.json
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\bin\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.runtimeconfig.dev.json
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\bin\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.dll
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\bin\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.pdb
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.csprojAssemblyReference.cache
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.AssemblyInfoInputs.cache
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.AssemblyInfo.cs
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.csproj.CoreCompileInputs.cache
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.dll
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.pdb
+C:\Users\sjoer\Source\Repos\sjoerdteunisse\GAN\GA-CSharp-Curve-Fit\obj\Debug\netcoreapp3.1\GA-CSharp-Curve-Fit.genruntimeconfig.cache

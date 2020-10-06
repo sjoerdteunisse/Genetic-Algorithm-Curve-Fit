@@ -7,19 +7,20 @@ namespace GA_CSharp_Curve_Fit.GA
     public class GeneticAlgorithm
     {
         private int _epochs;
-        private int _rebreedAmount;
+        private float _elitism;
         private float _mutationRate;
         private int _populationSize;
+        private Organism _bestSnapShot;
         private int _currentIndex = 0;
         private Random rnd = new Random();
 
         private List<List<Organism>> Generations_organisms;
 
-        public GeneticAlgorithm(int populationSize, float learningRate, float mutationRate, int rebreedAmount, int epochs)
+        public GeneticAlgorithm(int populationSize, float mutationRate, int epochs, float elitism)
         {
             _epochs = epochs;
+            _elitism = elitism;
             _mutationRate = mutationRate;
-            _rebreedAmount = rebreedAmount;
             _populationSize = populationSize;
             Generations_organisms = new List<List<Organism>>();
         }
@@ -44,9 +45,20 @@ namespace GA_CSharp_Curve_Fit.GA
             for (int i = 0; i < _epochs; i++) {
                 Console.WriteLine($"Epoch {i}");
                 Fitness(x, y);
-                Console.WriteLine($"best {Generations_organisms[_currentIndex].First().FitLevel}");
+
+                var bestOrganism = Generations_organisms[_currentIndex].First();
+                Console.WriteLine($"best {bestOrganism.FitLevel}");
+                Console.WriteLine($"Values for current best organism values= {bestOrganism.Genomes[0].Value} {bestOrganism.Genomes[1].Value} {bestOrganism.Genomes[2].Value} {bestOrganism.Genomes[3].Value} {bestOrganism.Genomes[4].Value} {bestOrganism.Genomes[5].Value}");
+
+                if(_bestSnapShot == null || bestOrganism.FitLevel < _bestSnapShot.FitLevel )
+                    _bestSnapShot = bestOrganism;
+
+                Console.WriteLine($"Values for best organism at fit ={ _bestSnapShot.FitLevel } values= {_bestSnapShot.Genomes[0].Value} {_bestSnapShot.Genomes[1].Value} {_bestSnapShot.Genomes[2].Value} {_bestSnapShot.Genomes[3].Value} {_bestSnapShot.Genomes[4].Value} {_bestSnapShot.Genomes[5].Value}");
+
                 Rebreed();
             }
+
+
         }
 
 
@@ -56,8 +68,13 @@ namespace GA_CSharp_Curve_Fit.GA
             _currentIndex++;
 
             int lastIndex = _currentIndex - 1;
+            
+            //Calculate elitism count based on percentages
+            int elitism = (int) _elitism * 100;
+            //Add elitism; Best N generations with best genomes stay alive in the next generation. Best between 5-10%
+            Generations_organisms[_currentIndex].AddRange(Generations_organisms[lastIndex].Take(elitism));
 
-            for (int i = 0; i < _populationSize; i++) 
+            for (int i = 0; i < _populationSize - elitism; i++) 
             {
                 if (lastIndex >= 0 && Generations_organisms[_currentIndex] != null) {
 
@@ -65,8 +82,8 @@ namespace GA_CSharp_Curve_Fit.GA
 
                     var organism = new Organism(6, 20, 10);
 
-                    var pos = rnd.Next(0, 9);
-                    var pos2 = rnd.Next(0, 9);
+                    var pos = rnd.Next(0, 3);
+                    var pos2 = rnd.Next(0, 3);
 
                     organism.SetInitialValues();
 
@@ -79,7 +96,7 @@ namespace GA_CSharp_Curve_Fit.GA
                         organism.Genomes[j].Value = bestOrganisms[pos2].Genomes[j].Value;
                     }
 
-                    //organism.Mutate(0.1f);
+                    organism.Mutate(0.02f);
 
                     Generations_organisms[_currentIndex].Add(organism);
                 }
