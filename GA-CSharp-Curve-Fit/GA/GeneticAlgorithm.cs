@@ -43,22 +43,22 @@ namespace GA_CSharp_Curve_Fit.GA
             InitializePopulation(6);
             
             for (int i = 0; i < _epochs; i++) {
-                Console.WriteLine($"Epoch {i}");
+                Console.WriteLine($"Epoch {i}\n");
                 Fitness(x, y);
 
                 var bestOrganism = Generations_organisms[_currentIndex].First();
-                Console.WriteLine($"best {bestOrganism.FitLevel}");
+                Console.WriteLine($"Best {bestOrganism.FitLevel}");
                 Console.WriteLine($"Values for current best organism values= {bestOrganism.Genomes[0].Value} {bestOrganism.Genomes[1].Value} {bestOrganism.Genomes[2].Value} {bestOrganism.Genomes[3].Value} {bestOrganism.Genomes[4].Value} {bestOrganism.Genomes[5].Value}");
 
                 if(_bestSnapShot == null || bestOrganism.FitLevel < _bestSnapShot.FitLevel )
                     _bestSnapShot = bestOrganism;
 
-                Console.WriteLine($"Values for best organism at fit ={ _bestSnapShot.FitLevel } values= {_bestSnapShot.Genomes[0].Value} {_bestSnapShot.Genomes[1].Value} {_bestSnapShot.Genomes[2].Value} {_bestSnapShot.Genomes[3].Value} {_bestSnapShot.Genomes[4].Value} {_bestSnapShot.Genomes[5].Value}");
+                Console.WriteLine($"Best organism snapshot {_bestSnapShot.FitLevel}");
+                Console.WriteLine($"Values for best organism values= {_bestSnapShot.Genomes[0].Value} {_bestSnapShot.Genomes[1].Value} {_bestSnapShot.Genomes[2].Value} {_bestSnapShot.Genomes[3].Value} {_bestSnapShot.Genomes[4].Value} {_bestSnapShot.Genomes[5].Value}\n");
 
                 Rebreed();
+                Generations_organisms[_currentIndex - 1].RemoveRange(0, _populationSize);
             }
-
-
         }
 
 

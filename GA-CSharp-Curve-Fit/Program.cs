@@ -1,6 +1,6 @@
-﻿using GA_CSharp_Curve_Fit.GA;
-using System;
+﻿using System;
 using System.Diagnostics;
+using GA_CSharp_Curve_Fit.GA;
 
 namespace GA_CSharp_Curve_Fit
 {
