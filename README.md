@@ -1,1 +1,1 @@
-GAN
+Genetic-Algorithm-Curve-Fit
